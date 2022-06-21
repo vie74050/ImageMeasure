@@ -187,8 +187,8 @@ class DragElement {
 		const defaultAttr = {
 			'shape' : 'dot',
 			'color' : '#fff',
-			'width': '25', //px
-			'height': '25' //px
+			'width': '30', //px
+			'height': '30' //px
 		};
 		const el = document.createElement("div");
 		const attrs = {...defaultAttr, ...options};

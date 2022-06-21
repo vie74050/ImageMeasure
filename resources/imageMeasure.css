@@ -50,7 +50,7 @@ body {
 }
 #imgMeasureContainer .dot::after {
 	content: '+';
-	font-weight: 900;
+	font-size: 2em;
 	vertical-align: sub;
 	color:red;
 }
