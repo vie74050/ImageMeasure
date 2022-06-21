@@ -31,10 +31,10 @@ body {
 #imgMeasureContainer>#imgRef {
 	position: absolute;
 }
-
 #imgMeasureContainer .draggable {
+	cursor: grab;
 	position: absolute;
-	background-color: rgba(255,255,255,0.5) ;
+	background-color: rgba(255,255,255,0.3) ;
 	text-align: center;
   	z-index: 9;
 }
@@ -44,6 +44,7 @@ body {
 }
 #imgMeasureContainer .dot::after {
 	content: '+';
+	font-weight: 900;
 	vertical-align: sub;
 	color:red;
 }
@@ -53,15 +54,34 @@ body {
 	margin-top:-1px;
 	background-color:red;
 }
-
-#output {
+#imgMeasureContainer #output {
 	display: block;
 	width: fit-content;
 	padding: 4px;
-	background-color: rgba(255,255,255,0.6) ;
+	background-color: rgba(255, 255, 255, 0.7) ;
 	color: #333;
 	margin-top: 30px;
 	transform: rotate(90deg);
+}
+#imgMeasureContainer .prompt{
+	background-color: rgb(255, 196, 0);
+	color: #333;
+    z-index: 999;
+    position: absolute;
+    width: max-content;
+    padding: 0.2em;
+    left: 35px;
+	top: 0px;
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently */
+}
+.arrow::before {
+	content: '\1F808 ';
+	display: inline-block;
 }
 
 /* Table formats - for 'editing' mode*/

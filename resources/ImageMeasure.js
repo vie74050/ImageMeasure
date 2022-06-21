@@ -1,8 +1,8 @@
 /* Author: Vienna Ly, BCIT LTC
  * June 20, 2022
  *
- * Repo: BCIT LTC Gitlab "imageMeasure"
- * Src endpoint: learning hub shared scripts/interactive
+ * Repo: GitHub "ImageMeasure"
+ * Demo POC: https://vie74050.github.io/ImageMeasure/demo.html
  * 
  * HTML template setup note:
  * 
@@ -75,15 +75,20 @@ class ImageMeasure extends HTMLElement  {
 	uiSetup(img, table) {
 		const me = this;
 		const div = document.createElement('div');
-				
+		const initPromp = document.createElement('div');	
+		const initPromptTxt = document.createTextNode("Drag calliper points to position");	
 		table.remove();
 
 		// Create component container to zero img position
 		document.body.appendChild(div);
 		div.setAttribute("id", "imgMeasureContainer");
 		img.setAttribute("id", "imgRef");
-
 		div.appendChild(img);
+
+		// initial prompt
+		initPromp.classList.add('prompt','arrow');
+		initPromp.appendChild(initPromptTxt);
+		div.appendChild(initPromp);
 
 		// Calliper elements
 		const sigFig = Number(self.getTableValues(table, 'SigFig')) || 1;
@@ -101,10 +106,12 @@ class ImageMeasure extends HTMLElement  {
 		p1.addEventListener('myPosition', (e) => { 
 			let h = me.adjustLine(p1, p2, line, output); 
 			outputLabel.textContent = (h*scale).toFixed(sigFig) ;
+			initPromp.remove();
 		});
 		p2.addEventListener('myPosition', (e) => { 
 			let h = me.adjustLine(p1, p2, line, output); 
 			outputLabel.textContent = (h*scale).toFixed(sigFig) ;
+			initPromp.remove();
 		});
 	}
 
