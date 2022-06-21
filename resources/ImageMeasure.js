@@ -1,17 +1,33 @@
-/* Author: Vienna Ly, BCIT LTC
- * June 20, 2022
+/* Author: Vienna Ly, BCIT LTC 2022
  *
- * Repo: GitHub "ImageMeasure"
+ * Repo: GitHub https://github.com/vie74050/ImageMeasure
  * Demo POC: https://vie74050.github.io/ImageMeasure/demo.html
  * 
  * HTML template setup note:
  * 
  * - Get image from HTML: expect 1 <img> tag
  * - Get scale from table: table format must be
- *  <table>
-      <thead><tr><th>Scale</th><th>Unit</th></tr></thead>
-      <tbody><tr><td>1</td><td>cm</td></tr></tbody>
+ 	<table>
+    	<thead>
+	  		<tr>
+			<th>Scale</th><th>SigFig</th>
+			</tr>
+		</thead>
+      	<tbody>
+			<tr>
+			<td>1</td><td>1</td>
+			</tr>
+		</tbody>
 	</table>
+
+	i) Scale: See console log for pixel length (H).
+	Scale = L / H, 
+		L = desired "real" length
+		H = pixel length of line
+
+	ii) SigFig: number of decimals to round L to
+		e.g. for 5.12345 and SigFig = 1, L = 5.1
+
  * 
  * Usage:
  * 
@@ -26,7 +42,7 @@
  * 
  * User:
  * User will see 2 draggable end points that can be positioned.
- * As user adjusts end points, the scaled length of the line will be shown in the #outputBox
+ * As user adjusts end points, the scaled length of the line will be shown in the #output
  * 
  */
 	
@@ -72,6 +88,10 @@ class ImageMeasure extends HTMLElement  {
 		
 	}
 
+	/** Creates the UI and hooks up event handlers 
+	 * @param HTMLImageElement img The image from HTML to measure
+	 * @param HTMLTableElement table The table from HTML with scale, precision data
+	*/
 	uiSetup(img, table) {
 		const me = this;
 		const div = document.createElement('div');
@@ -174,7 +194,7 @@ class ImageMeasure extends HTMLElement  {
 /** Creates a draggable div 
  * @param {HTMLElement} $parent Container parent for draggable object
  * @param {} options {
- * 	'shape': 'dot', 
+ * 	'shape': 'dot', //@TODO - other drag icon shapes?
  * 	'color': '#000', 
  * 	'fill':'#000',
  * 	'width': '1', //px
