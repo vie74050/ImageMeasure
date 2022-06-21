@@ -51,7 +51,7 @@ body {
 #imgMeasureContainer .dot::after {
 	content: '+';
 	font-size: 2em;
-	vertical-align: sub;
+	vertical-align: -63%;
 	color:red;
 }
 #imgMeasureContainer #line {

@@ -187,8 +187,8 @@ class DragElement {
 		const defaultAttr = {
 			'shape' : 'dot',
 			'color' : '#fff',
-			'width': '30', //px
-			'height': '30' //px
+			'width': '50', //px
+			'height': '50' //px
 		};
 		const el = document.createElement("div");
 		const attrs = {...defaultAttr, ...options};
@@ -210,19 +210,23 @@ class DragElement {
 		el.style.height = attrs['height'] + 'px';
 
 		el.onmousedown = dragMouseDown;
-
+		el.ontouchstart = dragMouseDown;
+		
 		// Event handlers
 		function dragMouseDown(e) {
 			e = e || window.event;
 			e.preventDefault();
 		
 			// get the mouse cursor position at startup:
-			me.pos3 = e.clientX;
-			me.pos4 = e.clientY;
+			me.pos3 = (e.touches)? e.touches[0].clientX : e.clientX;
+			me.pos4 = (e.touches)? e.touches[0].clientY : e.clientY;
 			document.onmouseup = closeDragElement;
+			document.ontouchend = closeDragElement;
+
 			// call a function whenever the cursor moves:
 			document.onmousemove = elementDrag;
-
+			document.ontouchmove = elementDrag;
+		
 			//console.log(this.pos1, this.pos2, this.pos3, this.pos4);
 		}
 		
@@ -230,10 +234,13 @@ class DragElement {
 			e = e || window.event;
 			e.preventDefault();
 			// calculate the new cursor position:
-			me.pos1 = me.pos3 - e.clientX;
-			me.pos2 = me.pos4 - e.clientY;
-			me.pos3 = e.clientX;
-			me.pos4 = e.clientY;
+			let _x = (e.touches)? e.touches[0].clientX : e.clientX,
+				_y = (e.touches)? e.touches[0].clientY : e.clientY;
+
+			me.pos1 = me.pos3 - _x;
+			me.pos2 = me.pos4 - _y;
+			me.pos3 = _x;
+			me.pos4 = _y;
 			// set the element's new position:
 			el.style.top = (el.offsetTop - me.pos2) + "px";
 			el.style.left = (el.offsetLeft - me.pos1) + "px";
@@ -246,6 +253,9 @@ class DragElement {
 			// stop moving when mouse button is released:
 			document.onmouseup = null;
 			document.onmousemove = null;
+			document.ontouchend = null;
+			document.ontouchmove = null;
+			document.ontouchcancel = null;
 		}
 	 		
 		$parent.appendChild(el);
