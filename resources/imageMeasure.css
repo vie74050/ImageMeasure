@@ -27,6 +27,7 @@ body {
 
 #imgMeasureContainer {
 	position: relative;
+	display: contents;
 }
 #imgMeasureContainer>#imgRef {
 	position: absolute;
