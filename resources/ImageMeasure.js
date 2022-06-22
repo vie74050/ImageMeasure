@@ -297,5 +297,12 @@ window.onload = (event) => {
 	customElements.define('img-measure', ImageMeasure);
 	customElements.upgrade(el);
 	//console.assert(el instanceof ImageMeasure);
+
+	// hack to remove speakreader from hyjacking content on D2L
+	const rs1 = document.getElementById("#readspeaker_button_1");
+	const rs2 = document.getElementById("#d2l_read_element_1");
+	if (rs1) rs1.remove();
+	if (rs2) rs2.remove();
+	
 };
 
