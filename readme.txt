@@ -6,9 +6,9 @@ Repo: GitHub https://github.com/vie74050/ImageMeasure
 
 Demo POC: https://vie74050.github.io/ImageMeasure/demo.html
 
-## HTML template setup note: ##
+## HTML template setup note ##
 
-- Get image from HTML: expect 1 <img> tag
+- Get image from HTML: expect 1 `<img>` tag
 - Get scale from table: table format must be
 
 ```html
