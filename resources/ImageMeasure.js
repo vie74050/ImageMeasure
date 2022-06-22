@@ -29,16 +29,22 @@
 		e.g. for 5.12345 and SigFig = 1, L = 5.1
 
  * 
- * Usage:
+ * Usage in Learning Hub
  * 
- * Instructor in learning Hub Edit Mode 
- * 1. insert an image (D2L Learning Hub feature).
- * 2. move calliper ends to a known length on image (desired length, L)
- * 3. console outputs the pixel length (P)
- * 4. calculate scale
- *   	Scale = L/P
- * 5. enter the Scale in the table under "Scale"
- * 6. set the number of significant figures to show in the table under "SigFig"
+ * In Edit Mode 
+ * 1. Insert an image (D2L Learning Hub feature) and adjust size as needed
+ * 
+ * 2. To get pixel length (H), set Scale to 1  
+ * * console output also shows the pixel length 
+ * * increase SigFig for more precision
+ * 
+ * Exit Edit Mode (Play Mode)
+ * 3. Move calliper ends to a known length (L) on image 
+ * 4. Calculate scale = L/H
+ * 
+ * In Edit Mode
+ * 5. Enter the Scale in the table under "Scale"
+ * 6. Set the number of significant figures to show in the table under "SigFig"
  * 
  * User:
  * User will see 2 draggable end points that can be positioned.
