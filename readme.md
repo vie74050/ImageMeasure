@@ -27,7 +27,7 @@ Demo POC: https://vie74050.github.io/ImageMeasure/demo.html
 
 ```
 
-- Scale = desred length (L) / pixel length (H)
+- Scale = desired length (L) / pixel length (H)
 - SigFig: number of decimals to round L to
     >e.g. for 5.12345 and SigFig = 1, L = 5.1
 
