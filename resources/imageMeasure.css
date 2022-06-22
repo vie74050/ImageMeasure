@@ -13,16 +13,13 @@ body {
 	font-weight: 300;
 	font-size: 14px;
 	color: #333;
-	max-width: 1200px;
 	min-width: 550px;
-	margin-bottom: 5em;
 	min-height: 500px;
-	top: 0px;
-	left: 0px;
-	
-	display: flex;
-	flex-wrap: wrap;
-	align-items: flex-start;
+}
+
+/* Hack to remove Readspeaker */
+#readspeaker_button_1, #d2l_read_element_1 {
+	display: none;
 }
 
 #imgMeasureContainer {
