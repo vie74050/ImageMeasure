@@ -4,7 +4,7 @@ Author: Vienna Ly, BCIT LTC 2022
 
 Repo: GitHub <https://github.com/vie74050/ImageMeasure>
 
-Demo POC on learn.bcit.ca LOR: <https://learn.bcit.ca/d2l/lor/viewer/view.d2l?ou=6605&loIdentId=41801>
+Demo on learn.bcit.ca LOR: <https://learn.bcit.ca/d2l/lor/viewer/view.d2l?ou=6605&loIdentId=41801>
 
 ## HTML template ##
 
@@ -33,11 +33,11 @@ Demo POC on learn.bcit.ca LOR: <https://learn.bcit.ca/d2l/lor/viewer/view.d2l?ou
 
 ## Usage in Learning Hub ##
 
->! Documentation below are instuctions for using learn.bcit.ca Learning Hub tools, current as of Jun 2022.
+>! Documentation below are instructions for using learn.bcit.ca Learning Hub tools, current as of Jun 2022.
 
 ### Add NEW from LOR ###
 
-To add the template HTML files from LOR:
+To add the template HTML files from LOR (only need to do this once per course)
 
 1. From **Content**, click **NEW > Add Object From LOR**
 2. Search for "Image Measure Template" (include quote marks for specific result)
@@ -52,7 +52,7 @@ The new page "**Image Measure Demo**" will be added to your **Content**.
 
 ### New from Template: creating multiple files ###
 
-Once you have the html file in Course Files, you can use it as a template to **Create New** file(s) using the **Select a Document Template** option on Learning Hub.
+Once you have the html file in **Course Files**, you can use it as a template to **Create New** file(s) using the **Select a Document Template** option on Learning Hub.
 
 #### Best Practice ####
 
