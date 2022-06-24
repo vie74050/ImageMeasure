@@ -109,6 +109,6 @@ In Edit Mode
     - Go to the file in **Course Files (a.k.a Manage Files)**
     - Select **Edit File** from the file menu ( ⌄ )  
     - Copy the **File Name** path shown at the top (e.g. `/content/enforced/7541-ViennaLySandbox/Interactive/ImageMeasure/`)
-    - Paste to the replace the path`src="___PASTE-FILE-NAME____"`
+    - Paste to replace the src path in the iframe code above, `src="___PASTE-FILE-NAME____"`  
 
-2. (**As needed**) Adjust the **height**/**width** of the iframe as needed to fit the content
+2. (**As needed**) Adjust the **height**/**width** of the iframe to fit the content
