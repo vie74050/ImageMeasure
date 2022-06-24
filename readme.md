@@ -39,7 +39,7 @@ Demo POC on learn.bcit.ca LOR: <https://learn.bcit.ca/d2l/lor/viewer/view.d2l?ou
 
 To add the template HTML files from LOR:
 
-1. From **Content**, Click **NEW > Add Object From LOR**
+1. From **Content**, click **NEW > Add Object From LOR**
 2. Search for "Image Measure Template" (include quote marks for specific result)
 3. Select item from the search result and then Next. Choose "Copy as Content" when prompted.
 
@@ -105,7 +105,7 @@ In Edit Mode
 </iframe>
 ```
 
-1. Change the `src` path to point to the desired file in Course Files.  quick way to get the file path:
+1. Change the `src` path to point to the desired file in Course Files. A quick way to get the file path:
     - Go to the file in **Course Files (a.k.a Manage Files)**
     - Select **Edit File** from the file menu ( ⌄ )  
     - Copy the **File Name** path shown at the top (e.g. `/content/enforced/7541-ViennaLySandbox/Interactive/ImageMeasure/`)
