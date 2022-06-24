@@ -86,11 +86,11 @@ In Edit Mode
 Exit Edit Mode (Play Mode)
 
 3. Move calliper ends to a known length **L** on image
-4. Calculate scale = L / H
+4. Calculate Scale = L / H
 
 In Edit Mode
 
-5. Enter the Scale in the table under "Scale"
+5. Enter the Calculated Scale in the table under "Scale"
 6. Set the number of significant figures to show in the table under "SigFig"
 
 ### Embed files into other Content pages ###
