@@ -40,7 +40,7 @@ Demo on learn.bcit.ca LOR: <https://learn.bcit.ca/d2l/lor/viewer/view.d2l?ou=660
 To add the template HTML files from LOR (only need to do this once per course)
 
 1. From **Content**, click **NEW > Add Object From LOR**
-2. Search for "Image Measure Template" (include quote marks for specific result)
+2. Search for **"Image Measure Template"** (include quote marks for specific result)
 3. Select item from the search result and then Next. Choose "Copy as Content" when prompted.
 
 >For this component, files will be created in `Coures Files /Interactive/ImageMeasure/` (default)
